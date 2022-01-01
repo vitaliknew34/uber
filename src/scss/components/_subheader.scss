@@ -1,0 +1,41 @@
+.subheader {
+    position: absolute;
+    top: 50px; /* * */
+    width: 100%;
+    height: 84px;
+    background-color: rgba(0,0,0, .6);
+}
+
+.subheader__logo {
+    display: block;
+    max-width: 100%;
+    margin-top: 16px;
+}
+
+.subheader__official {
+    margin-top: 6px;
+    opacity: 0.5;
+    color: $color-text1;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.subheader__call {
+    color: $color-text1;
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 19px;
+    text-align: right;
+}
+
+.subheader__phone {
+    display: block;
+    margin-top: 8px;
+    color: $color-text1;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 12px;
+}
+
