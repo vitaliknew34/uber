@@ -1,0 +1,81 @@
+.mobile {
+    min-height: 864px;
+    background: url(/src/img/bg/rectangle_20_142.jpg);
+    margin: 0 auto;
+
+    .row {
+        margin-top: 32px;
+    }
+    &_item { 
+        position: relative;
+        width: 320px;
+        height: 280px;
+        margin: 0 auto;
+        margin-bottom: 19px;
+        padding: 91px 0 0 0;
+        &_1 {
+            background: url(/src/img/1.jpg) center (center / cover) no-repeat;
+        }
+        &_2 {
+            background: url(/src/img/2.jpg) center (center / cover) no-repeat;
+        }
+        &_3 {
+            background: url(/src/img/3.jpg) center (center / cover) no-repeat;
+        }
+        &_4 {
+            background: url(/src/img/4.jpg) center (center / cover) no-repeat;
+        }
+        &_5 {
+            background: url(/src/img/5.jpg) center (center / cover) no-repeat;
+        }
+        &_6 {
+            background: url(/src/img/6.jpg) center (center / cover) no-repeat;
+        }
+        &_subtitle {
+            font-size: 24px;
+            line-height: 31px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-text1;
+            text-align: center;
+        }
+        &_plus {
+            position: absolute;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            transform: translateX(-50%);
+            align-items: center;
+            border-radius: 100%;
+            width: 26px;
+            height: 26px;
+            margin: 0 auto;
+            bottom: 35px;
+            left: 50%;
+        }
+    }
+
+}
+
+
+/* .mobile_item::before {
+    position: relative;
+    margin: 0 auto;
+    background: black;
+    display: flex;
+    content: '+';
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    color: aqua;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    top: 214px;
+} */
+/* .mobile_img {
+    position: absolute;
+    display: block;
+
+} */
