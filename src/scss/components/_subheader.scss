@@ -10,6 +10,9 @@
     display: block;
     max-width: 100%;
     margin-top: 16px;
+    .subheder__logo__img {
+
+    }
 }
 
 .subheader__official {
@@ -39,3 +42,24 @@
     line-height: 12px;
 }
 
+@media only screen and (min-width: 320px ) and (max-width: 425px) {
+    .subheader {
+        .row {
+           /*  flex-wrap: nowrap; */
+        }
+        .col-md-2 {
+            display: none;
+        }
+    }
+    .subheader__logo {
+        display: block;
+        max-width: 100%;
+        margin-top: 16px;
+        .subheder__logo__img {
+            /* width: 50%; */
+        }
+    }
+    
+   
+}
+    

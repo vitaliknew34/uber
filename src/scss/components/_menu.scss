@@ -4,16 +4,22 @@
     padding: 13px 70px;
     margin: 0;
     list-style-type: none;
+    &__item {
+        border-right: 2px dotted black;
+        padding-right: 28px;
+        &__link {
+            color: $color-text1;
+            font-size: 15px;
+            font-weight: 300;
+            text-decoration: none;
+        }
+    }   
+}
+@media only screen and (min-width: 320px ) and (max-width: 425px) {
+    .menu {
+        display: none;
+    }
+    
 }
 
-.menu__link {
-    color: $color-text1;
-    font-size: 15px;
-    font-weight: 300;
-    text-decoration: none;
-}
 
-.menu__item {
-    border-right: 2px dotted black;
-    padding-right: 28px;
-}
