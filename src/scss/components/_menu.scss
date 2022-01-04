@@ -7,6 +7,9 @@
     &__item {
         border-right: 2px dotted black;
         padding-right: 28px;
+        &:last-child {
+            border-right: none;
+        }
         &__link {
             color: $color-text1;
             font-size: 15px;
