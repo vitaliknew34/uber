@@ -34,6 +34,9 @@
         text-align: right;
         line-height: 12px;
     }
+    .xs-visible {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px) {
@@ -70,6 +73,12 @@
             font-size: 9px;
             margin-top: 6px;
         }
+        .xs-visible {
+            display: block;
+        }
     }
-
+    .xs-hidden {
+        display: none;
+    }
+    
 }
