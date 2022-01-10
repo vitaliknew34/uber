@@ -9,6 +9,12 @@
     text-transform: uppercase;
     @extend %btn;
 }
+@media (max-width: 768px ) {
+    .subheader_btn {
+        width: 130px;
+        height: 40px;
+    }
+}
 
 .promo_btn {
     display: block;

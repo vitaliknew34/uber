@@ -31,6 +31,13 @@ body {
   text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+  .subheader_btn {
+    width: 130px;
+    height: 40px;
+  }
+}
+
 .promo_btn {
   display: block;
   margin: 118px auto 0 auto;
@@ -217,7 +224,22 @@ body {
           transition-duration: .25s;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 425px) {
+@media (max-width: 768px) {
+  .menu {
+    padding: 15px 30px;
+  }
+  .menu_item {
+    padding-right: 8px;
+  }
+  .menu_link {
+    font-size: 12px;
+  }
+  .menu_link:hover {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
   .menu {
     display: none;
   }
@@ -274,6 +296,18 @@ body {
 
 .subheader .xs-visible {
   display: none;
+}
+
+@media (max-width: 768px) {
+  .subheader_logo {
+    margin-top: 16px;
+  }
+  .subheader_logo_img {
+    width: 100%;
+  }
+  .subheader_phone {
+    font-size: 19px;
+  }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 425px) {
@@ -453,7 +487,7 @@ body {
 
 .mobile_item {
   position: relative;
-  width: 320px;
+  width: 100%;
   height: 280px;
   margin: 0 auto;
   margin-bottom: 19px;
