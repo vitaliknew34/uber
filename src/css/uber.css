@@ -98,7 +98,7 @@ body {
 }
 
 .menu_link:hover {
-  color: black;
+  color: gray;
 }
 
 .hamburger-menu {
@@ -352,7 +352,7 @@ body {
 
 .promo {
   min-height: 800px;
-  background: url(/src/img/background.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/background.jpg) center center/cover no-repeat;
   padding: 150px 0 135px 0;
 }
 
@@ -477,7 +477,7 @@ body {
 
 .mobile {
   min-height: 864px;
-  background: url(/src/img/bg/rectangle_20_142.jpg);
+  background: url(/vitaliknew34.github.io/src/img/bg/rectangle_20_142.jpg);
   margin: 0 auto;
 }
 
@@ -495,27 +495,27 @@ body {
 }
 
 .mobile_item_1 {
-  background: url(/src/img/1.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/1.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_2 {
-  background: url(/src/img/2.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/2.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_3 {
-  background: url(/src/img/3.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/3.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_4 {
-  background: url(/src/img/4.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/4.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_5 {
-  background: url(/src/img/5.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/5.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_6 {
-  background: url(/src/img/6.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/6.jpg) center center/cover no-repeat;
 }
 
 .mobile_item_subtitle {
@@ -560,7 +560,7 @@ body {
   position: relative;
   width: 100%;
   min-height: 895px;
-  background: url(/src/img/bg/rectangle_20_142.jpg) center center/cover no-repeat;
+  background: url(/vitaliknew34.github.io/src/img/bg/rectangle_20_142.jpg) center center/cover no-repeat;
   /*  background-size: 100px/100px ; */
   padding-top: 57px;
 }
@@ -655,7 +655,7 @@ body {
 }
 
 .list_item_blue:before {
-  content: url(/src/icons/chek.png);
+  content: url(/vitaliknew34.github.io/src/icons/chek.png);
   display: block;
   width: 21px;
   height: 20px;
@@ -664,7 +664,7 @@ body {
 }
 
 .list_item:before {
-  content: url(/src/icons/chek-red.png);
+  content: url(/vitaliknew34.github.io/src/icons/chek-red.png);
   display: block;
   width: 21px;
   height: 20px;
@@ -682,7 +682,7 @@ body {
   /* display: grid; */
   position: relative;
   min-height: 717px;
-  background: url(/src/img/bg/map.jpg) center no-repeat, #080816;
+  background: url(/vitaliknew34.github.io/src/img/bg/map.jpg) center no-repeat, #080816;
   padding: 49px 0;
 }
 
