@@ -328,10 +328,12 @@ body {
     display: none;
   }
   .subheader_phone {
-    font-size: 12px;
+    text-align: start;
+    font-size: 15px;
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 11px;
+    text-decoration: none;
   }
   .subheader_call {
     display: none;
