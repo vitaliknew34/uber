@@ -103,15 +103,18 @@ body {
 
 .hamburger-menu {
   display: none;
+  /* скрываем чекбокс */
+  /* стилизуем кнопку */
+  /* добавляем "гамбургер" */
+  /* контейнер меню */
+  /* элементы меню */
 }
 
-/* скрываем чекбокс */
-#menu__toggle {
+.hamburger-menu #menu__toggle {
   opacity: 0;
 }
 
-/* стилизуем кнопку */
-.menu__btn {
+.hamburger-menu .menu__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,10 +132,9 @@ body {
   z-index: 5;
 }
 
-/* добавляем "гамбургер" */
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.hamburger-menu .menu__btn > span,
+.hamburger-menu .menu__btn > span::before,
+.hamburger-menu .menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -140,18 +142,17 @@ body {
   background-color: #ffffff;
 }
 
-.menu__btn > span::before {
+.hamburger-menu .menu__btn > span::before {
   content: '';
   top: -8px;
 }
 
-.menu__btn > span::after {
+.hamburger-menu .menu__btn > span::after {
   content: '';
   top: 8px;
 }
 
-/* контейнер меню */
-.menu__box {
+.hamburger-menu .menu__box {
   display: block;
   position: fixed;
   visibility: hidden;
@@ -170,8 +171,7 @@ body {
   opacity: 0.95;
 }
 
-/* элементы меню */
-.menu__item {
+.hamburger-menu .menu__item {
   display: block;
   padding: 12px 24px;
   color: #333;
@@ -181,45 +181,45 @@ body {
   text-decoration: none;
 }
 
-.menu__item:hover {
+.hamburger-menu .menu__item:hover {
   /* background-color: #CFD8DC; */
 }
 
-#menu__toggle:checked ~ .menu__btn > span {
+.hamburger-menu #menu__toggle:checked ~ .menu__btn > span {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-#menu__toggle:checked ~ .menu__btn > span::before {
+.hamburger-menu #menu__toggle:checked ~ .menu__btn > span::before {
   top: 0;
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
 
-#menu__toggle:checked ~ .menu__btn > span::after {
+.hamburger-menu #menu__toggle:checked ~ .menu__btn > span::after {
   top: 0;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-#menu__toggle:checked ~ .menu__box {
+.hamburger-menu #menu__toggle:checked ~ .menu__box {
   visibility: visible;
   right: 0;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.hamburger-menu .menu__btn > span,
+.hamburger-menu .menu__btn > span::before,
+.hamburger-menu .menu__btn > span::after {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
 }
 
-.menu__box {
+.hamburger-menu .menu__box {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
 }
 
-.menu__item {
+.hamburger-menu .menu__item {
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
 }
