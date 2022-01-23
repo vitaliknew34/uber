@@ -224,7 +224,7 @@ body {
           transition-duration: .25s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: landscape) {
   .menu {
     display: none;
     /* padding: 15px 30px;
