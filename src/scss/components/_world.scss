@@ -18,3 +18,15 @@
         text-decoration: none;
     }
 }
+@media (max-width: 575px) {
+    .world {
+
+        &_link {
+            width: 100%;
+            text-align: center;
+            left: 0;
+            transform: translateX(-0%);
+           
+        }
+    }
+}

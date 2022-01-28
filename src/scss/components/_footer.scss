@@ -114,6 +114,18 @@
 }
 @media (max-width: 575px) {
     .footer {
-        display: none;
+        .footer_links {
+            width: 100%;
+        }
+        .footer_links_main{
+            font-size: 15px;
+        }
+        .footer_links_sub {
+            width: 80%;
+        flex-wrap: wrap;
+        margin: 15px auto;
+        font-size: 13px;
+        line-height: 28px;
+        }
     }
 }
