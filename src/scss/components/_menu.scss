@@ -22,10 +22,10 @@
     } 
 }
 .hamburger-menu {
-    display: none;
-}
-/* скрываем чекбокс */
-#menu__toggle {
+  display: none;
+
+    /* скрываем чекбокс */
+  #menu__toggle {
     opacity: 0;
   }
   /* стилизуем кнопку */
@@ -89,7 +89,7 @@
       /* background-color: #CFD8DC; */
     }
   }
-  
+
   #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
   }
@@ -116,8 +116,10 @@
   .menu__item {
     transition-duration: .25s;
   }
+}
+
  
-@media (max-width: 767px ){
+@media (max-width: 767px ) and (orientation: landscape) {
   .menu {
     display: none;
     /* padding: 15px 30px;
