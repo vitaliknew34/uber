@@ -8,7 +8,7 @@
     }
     &_item { 
         position: relative;
-        width: 320px;
+        width: 100%;
         height: 280px;
         margin: 0 auto;
         margin-bottom: 19px;
@@ -56,26 +56,12 @@
     }
 
 }
+@media only screen and (min-width: 320px ) and (max-width: 575px) {
+    .mobile {
+        &_item { 
+            width: 290px;
+            height: 254px;
+        }
+    }        
+}
 
-
-/* .mobile_item::before {
-    position: relative;
-    margin: 0 auto;
-    background: black;
-    display: flex;
-    content: '+';
-    width: 26px;
-    height: 26px;
-    font-size: 14px;
-    text-align: center;
-    color: aqua;
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-    top: 214px;
-} */
-/* .mobile_img {
-    position: absolute;
-    display: block;
-
-} */

@@ -4,16 +4,157 @@
     padding: 13px 70px;
     margin: 0;
     list-style-type: none;
+    &_item {
+        border-right: 2px dotted black;
+        padding-right: 28px;
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &_link {
+        color: $color-text1;
+        font-size: 15px;
+        font-weight: 300;
+        text-decoration: none;
+        &:hover {
+          color: gray;
+        }
+    } 
 }
+.hamburger-menu {
+  display: none;
 
-.menu__link {
-    color: $color-text1;
-    font-size: 15px;
-    font-weight: 300;
+    /* скрываем чекбокс */
+  #menu__toggle {
+    opacity: 0;
+  }
+  /* стилизуем кнопку */
+  .menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 3px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-text1;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  /* контейнер меню */
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    margin: 0;
+    padding: 30px 0;
+    list-style: none;
+    text-align: center;
+    background-color: black;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    z-index: 3;
+    opacity: 0.95;
+  }
+  /* элементы меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
     text-decoration: none;
+    &:hover {
+      /* background-color: #CFD8DC; */
+    }
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    transition-duration: .25s;
+  }
+  .menu__box {
+    transition-duration: .25s;
+  }
+  .menu__item {
+    transition-duration: .25s;
+  }
 }
 
-.menu__item {
-    border-right: 2px dotted black;
-    padding-right: 28px;
+ 
+@media (max-width: 767px ) and (orientation: landscape) {
+  .menu {
+    display: none;
+    /* padding: 15px 30px;
+    &_item {
+      padding-right: 8px;
+    }
+    &_link {
+      font-size: 12px;
+        &:hover {
+          display: none;
+        }
+    }  */
+  }
+  .hamburger-menu {
+   display: block;
+   width: 100%;
+   height: 30px;
+   background-color: black;
+   position: fixed;
+   z-index: 5;
+ }
 }
+@media  (max-width: 575px) {
+  .menu {
+    display: none;
+    }
+  .hamburger-menu {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    position: fixed;
+    z-index: 5;
+  }
+  
+}
+
+

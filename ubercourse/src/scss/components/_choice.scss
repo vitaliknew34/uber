@@ -25,3 +25,13 @@
     z-index: 1;
     background: #070716 ;
 }
+@media  (max-width: 767px) {
+    .choice_img {
+        width: 100%;
+    }
+}
+@media  (max-width: 575px) {
+    .choice_img {
+        width: 100%;
+    }
+}
