@@ -198,7 +198,7 @@ if (a < 0 && b > 0 || a > 0 && b < 0 ) {
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+/* 'use strict';
 
 const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')
 
@@ -217,4 +217,125 @@ const d = prompt('На сколько оцените его?')
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
-console.log(personalMovieDB);
+console.log(personalMovieDB); */
+
+
+/* let svetophor = prompt("Введите цвет (red,green,yellow)");
+    
+    switch(svetophor){
+        case "red":
+            alert("Стоп");
+            break;
+        case "green":
+            alert("Вперед");
+            break;
+        case "yellow":
+            alert("Внимание");
+            break;
+        default:
+            alert("Поломка светофора");
+    } */
+    // Перепишите для if и else
+   /*  switch (browser) {
+        case 'Edge':
+          alert( "You've got the Edge!" );
+          break;
+      
+        case 'Chrome':
+        case 'Firefox':
+        case 'Safari':
+        case 'Opera':
+          alert( 'Okay we support these browsers too' );
+          break;
+      
+        default:
+          alert( 'We hope that this page looks ok!' );
+      } */
+
+      //Решение
+
+    /* let browser = prompt('Какой?');
+
+        if (browser == 'Edge') {
+            alert("You've got the Edge");
+        }
+        else if (browser == 'Chrome' 
+            || browser == 'Firefox' 
+            || browser == 'Safari' 
+            || browser == 'Opera' ) {
+            alert('Okay we support these browsers too' );
+        }
+        else {
+            alert('We hope that this page');
+        } */
+    
+        //Перепишите код с использованием одной конструкции switch:
+
+        /* const number = +prompt('Введите число между 0 и 3', '');
+
+        if (number === 0) {
+        alert('Вы ввели число 0');
+        }
+
+        if (number === 1) {
+        alert('Вы ввели число 1');
+        }
+
+        if (number === 2 || number === 3) {
+        alert('Вы ввели число 2, а может и 3');
+        } */
+
+    
+        //Решение
+        /* const number = +prompt('Введите число между 0 и 3', '')
+        switch (number) {
+            case 0:
+                alert('Вы ввели число 0');
+                break;
+            case 1: 
+                alert('Вы ввели число 1');
+                break;
+            case 2:
+            case 3:
+                alert('Вы ввели число 2, а может и 3');
+                break;
+            default: 
+                alert('некорректно')
+        } */
+       /* let a = ((Math.random() * 15).toFixed(0));
+        switch (a) {
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '10':
+            case '11':
+            case '12':
+            case '13':
+            case '14':
+            case '15':
+                alert('ок')
+                break;
+            default:
+                alert('no')
+        } */
+        /* let v = +prompt('введите число', '')
+        for (; v <= 15; v++){
+           alert (v);
+        } */
+       /*  let a = 3;
+        let b = 4; */ 
+        function calc(a, b) {
+            alert (a / b)
+            alert ( a - b)
+            alert (a + b);
+            return(a * b );
+           
+        }
+        alert(calc(6, 3))
+        
