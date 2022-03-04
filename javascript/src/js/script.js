@@ -331,7 +331,7 @@ console.log(personalMovieDB); */
        /*  let a = 3;
         let b = 4; */ 
         
-        let a = +prompt('Введите первое число', '');
+            let a = +prompt('Введите первое число', '');
             let b = +prompt('Введите второе число', '');
             let c = prompt('какое действие выполнить?', '');
         function calc() {
@@ -345,33 +345,33 @@ console.log(personalMovieDB); */
                 alert(`умножение ответ: ${a * b}`);
             }
             else if ( c == '/' || c == 'Деление' || c == 'деление' ) {
-                alert(`деление ответ: ${a / b}`);
+                alert(`деление ответ: "${a}" разделить на ${b} = ${a / b}`);
             }
             else  {
                 for (let i = prompt('ошибка ввода, повторите действие ("+" , "-" , "*" , "/") ',''); i !== null  ;  ) {
-                    /* calc(); */
-                    /* alert(calc()); */
-                   /*  alert(`сложение ответ: ${a + b}`); */
                    
                     if ( i == '+' ) {
-                        alert(`сложение ответ: ${a + b}`);
+                        alert(`сложение ответ: ${a + b}`);break
+                    }
+                    else if ( i== '-') {
+                        alert(`вычитание ответ: ${a - b}`);break
+                    }
+                    else if (i == '*') {
+                        alert(`умножение ответ: ${a * b}`);break
+                    }
+                    else if (i == '/') {
+                        alert(`деление ответ: ${a} разделить на "${b}" =  ${a / b}`);break
                     }
                     else {
-                        prompt('ошибка ввода, повторите действие ','')
+                        i = prompt('ошибка ввода, повторите действие ','')
+                        /* if ( i == '+' ) {
+                            alert(`сложение ответ: ${a + b}`);break;
+                        } */
                     }
-                    
+
                     /* alert('') ;break; */
                 }
             }
-            
-
-
-           
-            
-            
-            
-            
-            
 
         }
         calc(); 
@@ -379,3 +379,5 @@ console.log(personalMovieDB); */
         /* let test = calc(); */
         /* alert(test); */
         
+       
+       
