@@ -352,7 +352,13 @@ console.log(personalMovieDB); */
 
                 }
             } */
-            /* let a = +prompt('Введите первое число', '');
+            let a = +prompt('Введите первое число', '');
+            /* if(!isNaN(a)){
+                for(let i =+prompt('Введите первое число', '');i !== null ;){
+                    i = prompt('ошибка ввода, повторите действие ','')
+                }
+            } */
+            
             let b = +prompt('Введите второе число', '');
             let c = prompt('какое действие выполнить?', '');
          
@@ -392,7 +398,7 @@ console.log(personalMovieDB); */
             }
 
         }
-        calc();  */
+        calc(); 
 
 //КОНЕЦ ПЕРВАЯ ПРОБА КАЛЬКУЛЯТОР
 
@@ -492,7 +498,7 @@ console.log(personalMovieDB); */
 
 //РЕШЕНИЕ:
 
-     function sum(a,b) {
+   /*   function sum(a,b) {
         return a + b;
     }
 
@@ -509,7 +515,7 @@ console.log(personalMovieDB); */
     function del(a,b) {
         return a / b;
     }
-    del(); 
+    del();  */
 
 
 /* 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch). */
@@ -518,7 +524,7 @@ console.log(personalMovieDB); */
 
 //ПРИМЕР №1
 
-    let arg1 = +prompt('Введите первое число' , '');
+   /*  let arg1 = +prompt('Введите первое число' , '');
     let arg2 = +prompt('Введите второе число' , '');
     let operation = prompt('Введите знак + , - , * , / ', '');
 
@@ -544,7 +550,7 @@ console.log(personalMovieDB); */
     }
 
     mathOperation(arg1, arg2, operation);
-    
+     */
 //ПРИМЕР №2
     /* function mathOperation(arg1, arg2, operation) {
         switch (operation){
