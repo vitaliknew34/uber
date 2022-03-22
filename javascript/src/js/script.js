@@ -376,9 +376,6 @@ console.log(personalMovieDB); */
 
             let c = prompt('какое действие выполнить?', ''); */
 
-
-        function calc() {
-            let a = +prompt('Введите первое число', '');
             /* if(a == '0') {
                 for(; ;) {
 
@@ -388,10 +385,13 @@ console.log(personalMovieDB); */
             }
              */
 
+        function calc() {
+            let a = +prompt('Введите первое число', '');
+            
             if(isNaN(a) || a == 0){
                 for (; ;) {
                     if(isNaN(a) || a == 0) {
-                        a = +prompt('Введите первое число', '');
+                        a = +prompt('Введите первое число, повторно!', '');
                     }
                     else {
                        break;
@@ -404,7 +404,7 @@ console.log(personalMovieDB); */
             if(isNaN(b)){
                 for (; ;) {
                     if(isNaN(b)) {
-                        b = +prompt('Введите второе число', '');
+                        b = +prompt('Введите второе число, повторно!', '');
                     }
                     else {
                        break;
