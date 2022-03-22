@@ -379,10 +379,18 @@ console.log(personalMovieDB); */
 
         function calc() {
             let a = +prompt('Введите первое число', '');
+            /* if(a == '0') {
+                for(; ;) {
 
-            if(isNaN(a)){
+                    a = +prompt('Вы не ввели число, повторите попытку', '')
+                    
+                }
+            }
+             */
+
+            if(isNaN(a) || a == 0){
                 for (; ;) {
-                    if(isNaN(a)) {
+                    if(isNaN(a) || a == 0) {
                         a = +prompt('Введите первое число', '');
                     }
                     else {
