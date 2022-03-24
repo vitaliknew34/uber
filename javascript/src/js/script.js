@@ -603,7 +603,7 @@ console.log(personalMovieDB); */
     mathOperation(arg1, arg2, operation);
      */
 //ПРИМЕР №2
-    /* function mathOperation(arg1, arg2, operation) {
+    function mathOperation(arg1, arg2, operation) {
         switch (operation){
             case '+':
                 return sum(arg1,arg2);
@@ -618,7 +618,7 @@ console.log(personalMovieDB); */
                 return del(arg1,arg2);       
         } 
     }
-   let testcalc = mathOperation(); */
+   let testcalc = mathOperation();
   /* let b = '1' ;
   let c = '2';
   let a =  `' ${b} + ${c}' `
@@ -627,13 +627,7 @@ console.log(personalMovieDB); */
   d = a
   console.log(a) */
 
-function test (text) {
-    /* let t = text; */
-   /*  text =  `' ${b} + ${c}'` */
-   return (new Function('return ' + text))();
-    console.log(text)
-}
-test('1+2')
+
 /* function addbits(s) {
     var total = 0;
     s = s.replace(/\s/g, '').match(/[+\-]?([0-9\.\s]+)/g) || [];
@@ -648,11 +642,27 @@ console.log(addbits('5 + 30')); */
     return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
 };
     console.log(func("2+1")); */
-    
+
+    //ПРИМЕР 2
     function func(str){
         let arr = str.split(" ");
+        switch(arr[1]){
+            /* case '+':
+                return sum(arg1,arg2);
+                
+            case '-':
+                return razn(arg1,arg2) */
+               
+            case '*' :
+                return `'${String(umn(arr[0],arr[2]))}'`;   
+              
+            case '/':
+                return `'${String(del(arr[0],arr[2]))}'`;       
+        } 
+        
         return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
+        
     };
-    console.log();
-    console.log(func("10 + 9"));
+    console.log(func("10 * 5"));
    
+    
