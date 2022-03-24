@@ -385,7 +385,7 @@ console.log(personalMovieDB); */
             }
              */
 
-        function calc() {
+        /* function calc() {
             let a = +prompt('Введите первое число', '');
             
             if(isNaN(a) || a == 0){
@@ -449,7 +449,7 @@ console.log(personalMovieDB); */
             }
 
         }
-        calc(); 
+        calc();  */
 
 //КОНЕЦ ПЕРВАЯ ПРОБА КАЛЬКУЛЯТОР
 
@@ -549,7 +549,7 @@ console.log(personalMovieDB); */
 
 //РЕШЕНИЕ:
 
-   /*   function sum(a,b) {
+     function sum(a,b) {
         return a + b;
     }
 
@@ -566,7 +566,7 @@ console.log(personalMovieDB); */
     function del(a,b) {
         return a / b;
     }
-    del();  */
+    del(); 
 
 
 /* 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch). */
@@ -607,16 +607,52 @@ console.log(personalMovieDB); */
         switch (operation){
             case '+':
                 return sum(arg1,arg2);
-                break;
+                
             case '-':
                 return razn(arg1,arg2)
-                break;
+               
             case '*' :
                 return umn(arg1,arg2);
-                break;
+              
             case '/':
-                return del(arg1,arg2);
-                break;        
-        }
+                return del(arg1,arg2);       
+        } 
     }
-    console.log(mathOperation(4, 3, '/' )); */
+   let testcalc = mathOperation(); */
+  /* let b = '1' ;
+  let c = '2';
+  let a =  `' ${b} + ${c}' `
+  let d = `' ${+b} + ${+c}'` 
+  return b + c;
+  d = a
+  console.log(a) */
+
+function test (text) {
+    /* let t = text; */
+   /*  text =  `' ${b} + ${c}'` */
+   return (new Function('return ' + text))();
+    console.log(text)
+}
+test('1+2')
+/* function addbits(s) {
+    var total = 0;
+    s = s.replace(/\s/g, '').match(/[+\-]?([0-9\.\s]+)/g) || [];
+    while(s.length) total += parseFloat(s.shift());
+    return total;
+}
+console.log(addbits('5 + 30')); */
+
+//ПРЕВЩАЕМ СТРОКУ В МАССИВ
+/* let func = (str) => {
+    let arr = str.split("");
+    return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
+};
+    console.log(func("2+1")); */
+    
+    function func(str){
+        let arr = str.split(" ");
+        return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
+    };
+    console.log();
+    console.log(func("10 + 9"));
+   
