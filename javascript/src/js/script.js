@@ -647,16 +647,21 @@ console.log(addbits('5 + 30')); */
     
     function func(str){
         let arr = str.split(" ");
+        /* arr.length = 3 */
         /* let arrr = arr[0]; */
-        if (arr[0] % 1 !== 0 || // ПРОВЕРКА arr[0] НА ЦЕЛОЕ ЧИСЛО
+        if (arr.length > 3 || // Если количество элементов массива больше 3
+            arr[0] % 1 !== 0 || // ПРОВЕРКА arr[0] НА ЦЕЛОЕ ЧИСЛО
             arr[2] % 1 !== 0 || // ПРОВЕРКА arr[2] НА ЦЕЛОЕ ЧИСЛО
             arr[0] < 0  ||  
             arr[0] > 10 || 
-            arr[2] <= 0  || 
+            arr[2] <= 0 || 
             arr[2] > 10 || 
             isNaN(arr[0]) || isNaN(arr[2])) /* ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */ {
             throw "throws Error!";
         }
+        /* if(arr.length > 3){
+            throw "throws Error!"
+        } */
 
         switch(arr[1]){
             case '+':
@@ -679,6 +684,6 @@ console.log(addbits('5 + 30')); */
         /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
         
     };
-    console.log( func("9 / 2"));
+    console.log( func("9 + 2 + 1"));
     console.log(typeof( func("10 / 5")));
    
