@@ -603,7 +603,7 @@ console.log(personalMovieDB); */
     mathOperation(arg1, arg2, operation);
      */
 //ПРИМЕР №2
-    function mathOperation(arg1, arg2, operation) {
+    /* function mathOperation(arg1, arg2, operation) {
         switch (operation){
             case '+':
                 return sum(arg1,arg2);
@@ -618,7 +618,7 @@ console.log(personalMovieDB); */
                 return del(arg1,arg2);       
         } 
     }
-   let testcalc = mathOperation();
+   let testcalc = mathOperation(); */
   /* let b = '1' ;
   let c = '2';
   let a =  `' ${b} + ${c}' `
@@ -646,23 +646,40 @@ console.log(addbits('5 + 30')); */
     //ПРИМЕР 2
     function func(str){
         let arr = str.split(" ");
+        if (arr[0] <= 0 || 
+            arr[0] > 10 || 
+            arr[2] <= 0 || 
+            arr[2] > 10 || 
+            isNaN(arr[0]) || isNaN(arr[2])) {
+            throw "throws Error!";
+        }
+        /* if(Number.isInteger(arr[0])){
+            console.log('да')
+        } */
         switch(arr[1]){
-            /* case '+':
-                return sum(arg1,arg2);
+            case '+':
+                return `'${(sum(Number(arr[0]),Number(arr[2])))}'`;
                 
             case '-':
-                return razn(arg1,arg2) */
-               
+                return`'${(razn(Number(arr[0]),Number(arr[2])))}'`;
+             
             case '*' :
                 return `'${String(umn(arr[0],arr[2]))}'`;   
               
             case '/':
-                return `'${String(del(arr[0],arr[2]))}'`;       
+                return `'${String(del(arr[0],arr[2]))}'`;   
+                
+            default: 
+            throw "throws Error!";
+            /* throw console.log("throws Error!"); */
         } 
-        
-        return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
+        //ОБРАЗЕЦ ТИПОВОГО РЕШЕНИЯ ИЗ ИНТЕРНЕТА( + ; -)
+        /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
         
     };
-    console.log(func("10 * 5"));
-   
+    console.log( func("5 - 6"))
+    /* console.log(typeof( func("10 - 5"))); */
+   /* for( let i = 1; i > 0 && i < 11; i++) {
+       console.log(i)
+   } */
     
