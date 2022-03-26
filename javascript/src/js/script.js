@@ -686,4 +686,4 @@ console.log(addbits('5 + 30')); */
     };
     console.log( func("9 + 2 + 1"));
     console.log(typeof( func("10 / 5")));
-   
+    //Определиться с нулем (0) в аргументе 
