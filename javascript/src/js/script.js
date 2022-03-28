@@ -644,9 +644,24 @@ console.log(addbits('5 + 30')); */
     console.log(func("2+1")); */
 
     //ПРИМЕР 2
+    function romanize (num) {
+        /* if (!+num)
+            return false; */
+        var digits = String(+num).split(""),
+            key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+                   "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+                   "","I","II","III","IV","V","VI","VII","VIII","IX"],
+            roman = "",
+            i = 3;
+        while (i--)
+            roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+        return Array(+digits.join("") + 1).join("M") + roman;
+    }
+    
     
     function func(str){
         let arr = str.split(" ");
+        
         switch(arr[0]) {
             case 'I':
                 arr[0] = 1;
@@ -737,6 +752,7 @@ console.log(addbits('5 + 30')); */
             
             return "''";
         } */
+        
         switch(arr[1]){
             case '+':
                 return `'${(sum(Number(arr[0]),Number(arr[2])))}'`;
@@ -752,14 +768,14 @@ console.log(addbits('5 + 30')); */
                 
             default: 
             throw "throws Error!";
-            /* throw console.log("throws Error!"); */
-        } 
+        }
+            
 
         //ОБРАЗЕЦ ТИПОВОГО РЕШЕНИЯ ИЗ ИНТЕРНЕТА( + ; -)
         /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
         
     };
     
-    console.log( func("III / III"));
+    console.log( func("III + III"));
     console.log(typeof( func("3 - 3")));
     //Определиться с нулем (0) в ответе с римскими
