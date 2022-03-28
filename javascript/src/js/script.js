@@ -760,6 +760,6 @@ console.log(addbits('5 + 30')); */
         
     };
     
-    console.log( func("II / III"));
+    console.log( func("III / III"));
     console.log(typeof( func("3 - 3")));
-    //Определиться с нулем (0) в аргументе 
+    //Определиться с нулем (0) в ответе с римскими
