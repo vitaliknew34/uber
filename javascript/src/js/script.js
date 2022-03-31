@@ -645,8 +645,8 @@ console.log(addbits('5 + 30')); */
 
     //ПРИМЕР 2
     function romanize (num) {
-        /* if (!+num)
-            return false; */
+        if (!+num)
+            return false;
         var digits = String(+num).split(""),
             key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
                    "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
@@ -661,7 +661,6 @@ console.log(addbits('5 + 30')); */
     
     function func(str){
         let arr = str.split(" ");
-        
         switch(arr[0]) {
             case 'I':
                 arr[0] = 1;
@@ -726,15 +725,13 @@ console.log(addbits('5 + 30')); */
                 arr[2] = 10;
                 break;
         }
-       /*  if(arr[0] == 'II') {
-            arr[0]= 2;
-        }
-        if(arr[0] == 'III') {
-            arr[0]= 3;
-        }
-        if(arr[2] == 'I') {
-            arr[2] = 1;
+        /* if ( isNaN (arr[0] && isNaN(arr[2]))) {
+            if (arr[1]=='+'){
+                return `'${+arr[0] + +arr[2]}'` 
+            }
         } */
+        
+         
         if (arr.length > 3 || // Если количество элементов массива больше 3
             arr[0] % 1 !== 0 || // ПРОВЕРКА arr[0] НА ЦЕЛОЕ ЧИСЛО
             arr[2] % 1 !== 0 || // ПРОВЕРКА arr[2] НА ЦЕЛОЕ ЧИСЛО
@@ -746,36 +743,46 @@ console.log(addbits('5 + 30')); */
             throw "throws Error!";
         }
         
+        
         //ПРИМЕНЯЕМ К РИМСКИМ ЧИСЛАМ ЗАГОТОВКУ нулевого значения
         /* if (arr[0] < arr[2] && arr[1] == '-' || 
             arr[0] == arr[2] && arr[1] == '-' ) {
             
             return "''";
         } */
-        
-        switch(arr[1]){
-            case '+':
-                return `'${(sum(Number(arr[0]),Number(arr[2])))}'`;
+        /* if (arr[0] == 'III' && arr[2]=='III'){} */
+       
+        /* let res = resultate.split("") */
+        let resultate = sum(Number(arr[0]),Number(arr[2]));
+        if(!isNaN(arr[0]) && !isNaN(arr[2])){
+            switch(arr[1]){
+                case '+':
+                    return `'${(Number(resultate))}'` ;
+                    
+                case '-':
+                    return`'${(razn((arr[0]),(arr[2])))}'`;
                 
-            case '-':
-                return`'${(razn((arr[0]),(arr[2])))}'`;
-             
-            case '*' :
-                return `'${(umn(arr[0],arr[2]))}'`;   
-              
-            case '/':
-                return `'${Math.trunc((del(arr[0],arr[2])))}'`;   
+                case '*' :
+                    return `'${(umn(arr[0],arr[2]))}'`;   
                 
-            default: 
-            throw "throws Error!";
+                case '/':
+                    return `'${Math.trunc((del(arr[0],arr[2])))}'`;   
+                    
+                default: 
+                throw "throws Error!";
+            }
         }
-            
+        else if( romanize(arr[0]) && romanize(arr[2])){//РИМСКИЙ ОТВЕТ
+            if (arr[1] == '+' ){
+                return  `'${romanize(+arr[0] + +arr[2])}'`
+            }
+        }
 
         //ОБРАЗЕЦ ТИПОВОГО РЕШЕНИЯ ИЗ ИНТЕРНЕТА( + ; -)
         /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
         
     };
     
-    console.log( func("III + III"));
-    console.log(typeof( func("3 - 3")));
+    console.log( func("I + I"));
+    console.log(typeof( func("2 + 2")));
     //Определиться с нулем (0) в ответе с римскими
