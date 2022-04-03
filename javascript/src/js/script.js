@@ -661,7 +661,14 @@ console.log(addbits('5 + 30')); */
     
     function func(str){
         let arr = str.split(" ");
-        switch(arr[0]) {
+        let resultate = sum(Number(arr[0]),Number(arr[2]));
+        /* if ( isNaN (arr[0] && isNaN(arr[2]))) {
+            if (arr[1]=='+'){
+                return `'${+arr[0] + +arr[2]}'` 
+            }
+        } */
+        if(isNaN(String(arr[2])) && isNaN(String(arr[0]))){//РИМСКИЙ ОТВЕТ
+            switch(arr[0]) {
             case 'I':
                 arr[0] = 1;
                 break; 
@@ -725,36 +732,12 @@ console.log(addbits('5 + 30')); */
                 arr[2] = 10;
                 break;
         }
-        /* if ( isNaN (arr[0] && isNaN(arr[2]))) {
-            if (arr[1]=='+'){
-                return `'${+arr[0] + +arr[2]}'` 
-            }
-        } */
-        
-         
-        if (arr.length > 3 || // Если количество элементов массива больше 3
-            arr[0] % 1 !== 0 || // ПРОВЕРКА arr[0] НА ЦЕЛОЕ ЧИСЛО
-            arr[2] % 1 !== 0 || // ПРОВЕРКА arr[2] НА ЦЕЛОЕ ЧИСЛО
-            arr[0] <= 0  ||  
-            arr[0] > 10 || 
-            arr[2] <= 0 || 
-            arr[2] > 10 || 
-            isNaN(arr[0]) || isNaN(arr[2])) /* ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */ {
-            throw "throws Error!";
+                if (arr[1] == '+' ){
+                    return  `'${romanize(+arr[0] + +arr[2])}'`
+                }
         }
-        
-        
-        //ПРИМЕНЯЕМ К РИМСКИМ ЧИСЛАМ ЗАГОТОВКУ нулевого значения
-        /* if (arr[0] < arr[2] && arr[1] == '-' || 
-            arr[0] == arr[2] && arr[1] == '-' ) {
-            
-            return "''";
-        } */
-        /* if (arr[0] == 'III' && arr[2]=='III'){} */
        
-        /* let res = resultate.split("") */
-        let resultate = sum(Number(arr[0]),Number(arr[2]));
-        if(!isNaN(arr[0]) && !isNaN(arr[2])){
+        else if(!isNaN(arr[0]) && !isNaN(arr[2])){
             switch(arr[1]){
                 case '+':
                     return `'${(Number(resultate))}'` ;
@@ -772,17 +755,35 @@ console.log(addbits('5 + 30')); */
                 throw "throws Error!";
             }
         }
-        else if( romanize(arr[0]) && romanize(arr[2])){//РИМСКИЙ ОТВЕТ
-            if (arr[1] == '+' ){
-                return  `'${romanize(+arr[0] + +arr[2])}'`
-            }
+        
+        if (arr.length > 3 || // Если количество элементов массива больше 3
+            arr[0] % 1 !== 0 || // ПРОВЕРКА arr[0] НА ЦЕЛОЕ ЧИСЛО
+            arr[2] % 1 !== 0 || // ПРОВЕРКА arr[2] НА ЦЕЛОЕ ЧИСЛО
+            arr[0] <= 0  ||  
+            arr[0] > 10 || 
+            arr[2] <= 0 || 
+            arr[2] > 10 /* || 
+            isNaN(arr[0]) || isNaN(arr[2]) */) /* ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */ {
+            throw "throws Error!";
         }
-
+        
+        
+        //ПРИМЕНЯЕМ К РИМСКИМ ЧИСЛАМ ЗАГОТОВКУ нулевого значения
+        /* if (arr[0] < arr[2] && arr[1] == '-' || 
+            arr[0] == arr[2] && arr[1] == '-' ) {
+            
+            return "''";
+        } */
+        /* if (arr[0] == 'III' && arr[2]=='III'){} */
+       
+        /* let res = resultate.split("") */
+       
+        
         //ОБРАЗЕЦ ТИПОВОГО РЕШЕНИЯ ИЗ ИНТЕРНЕТА( + ; -)
         /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
         
     };
     
-    console.log( func("I + I"));
-    console.log(typeof( func("2 + 2")));
+    console.log( func("V + V"));
+    console.log(typeof( func("V + V")));
     //Определиться с нулем (0) в ответе с римскими
