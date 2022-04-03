@@ -699,7 +699,10 @@ console.log(addbits('5 + 30')); */
             case 'X':
                 arr[0] = 10;
                 break;
+            default: 
+                throw "throws Error!";
         }
+        
         switch(arr[2]) {
             case 'I':
                 arr[2] = 1;
@@ -731,10 +734,33 @@ console.log(addbits('5 + 30')); */
             case 'X':
                 arr[2] = 10;
                 break;
+            default: 
+                throw "throws Error!";
         }
-                if (arr[1] == '+' ){
+        //ПРИМЕНЯЕМ К РИМСКИМ ЧИСЛАМ ЗАГОТОВКУ нулевого значения
+        if (arr[0] < arr[2] && arr[1] == '-' || 
+            arr[0] == arr[2] && arr[1] == '-' ) {
+            
+            return "''";
+        }
+            switch(arr[1]){
+                case '+':
+                    return  `'${romanize(sum(arr[0],arr[2]))}'` ;
+                case '-':
+                    return`'${romanize(razn((arr[0]),(arr[2])))}'`;
+                
+                case '*' :
+                    return `'${romanize(umn(arr[0],arr[2]))}'`;   
+                
+                case '/':
+                    return `'${romanize(Math.trunc((del(arr[0],arr[2]))))}'`;   
+                    
+                default: 
+                throw "throws Error!";
+            }
+               /*  if (arr[1] == '+' ){
                     return  `'${romanize(+arr[0] + +arr[2])}'`
-                }
+                } */
         }
        
         else if(!isNaN(arr[0]) && !isNaN(arr[2])){
@@ -762,18 +788,13 @@ console.log(addbits('5 + 30')); */
             arr[0] <= 0  ||  
             arr[0] > 10 || 
             arr[2] <= 0 || 
-            arr[2] > 10 /* || 
-            isNaN(arr[0]) || isNaN(arr[2]) */) /* ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */ {
+            arr[2] > 10 || 
+            isNaN(arr[0]) || isNaN(arr[2])) /* ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */ {
             throw "throws Error!";
         }
         
         
-        //ПРИМЕНЯЕМ К РИМСКИМ ЧИСЛАМ ЗАГОТОВКУ нулевого значения
-        /* if (arr[0] < arr[2] && arr[1] == '-' || 
-            arr[0] == arr[2] && arr[1] == '-' ) {
-            
-            return "''";
-        } */
+       
         /* if (arr[0] == 'III' && arr[2]=='III'){} */
        
         /* let res = resultate.split("") */
@@ -784,6 +805,6 @@ console.log(addbits('5 + 30')); */
         
     };
     
-    console.log( func("V + V"));
+    console.log( func("II - V"));
     console.log(typeof( func("V + V")));
     //Определиться с нулем (0) в ответе с римскими
