@@ -798,6 +798,6 @@ console.log(addbits('5 + 30')); */
        
     };
     
-    console.log( func("V + V"));
-    console.log(typeof( func("V + V")));
+    console.log( func("I - II"));
+    console.log(typeof( func("I - V")));
     
