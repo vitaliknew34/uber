@@ -549,7 +549,7 @@ console.log(personalMovieDB); */
 
 //РЕШЕНИЕ:
 
-     function sum(a,b) {
+    /* function sum(a,b) {
         return a + b;
     }
 
@@ -566,7 +566,7 @@ console.log(personalMovieDB); */
     function del(a,b) {
         return a / b;
     }
-    del(); 
+    del();  */
 
 
 /* 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch). */
@@ -642,12 +642,39 @@ console.log(addbits('5 + 30')); */
     return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'`
 };
     console.log(func("2+1")); */
-/* isNaN(arr[0]) || isNaN(arr[2])  // ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */
-    //ПРИМЕР 2
+    /* isNaN(arr[0]) || isNaN(arr[2])  // ЯВЛЯЕТСЯ ЛИ ЧИСЛОВЫМ ЗНАЧЕНИЕМ */
+//ПРИМЕР 2
     //ОБРАЗЕЦ ТИПОВОГО РЕШЕНИЯ ИЗ ИНТЕРНЕТА( + ; -)
         /* return `'${Number(arr[0]) + parseInt(arr[1] + Number(arr[2]))}'` */
+         /* if ( isNaN (arr[0] && isNaN(arr[2]))) {
+            if (arr[1]=='+'){
+                return `'${+arr[0] + +arr[2]}'` 
+            }
+        } */
 
-    function romanize(num) {//ПРЕОБРАЗОВАНИЯ АРАБСКОГО В РИМСКОЕ
+    
+// КАЛЬКУЛЯТОР KATAacademy ВСТУПИТЕЛЬНОЕ ЗАДАНИЕ
+
+
+    /* function sum(a,b) {
+        return a + b;
+    }
+
+    function razn(a,b) {
+        return a - b;
+    }
+    razn();
+
+    function umn(a,b) {
+        return a * b;
+    }
+    umn();
+
+    function del(a,b) {
+        return a / b;
+    }
+    del(); */
+    /* function romanize(num) {//ПРЕОБРАЗОВАНИЯ АРАБСКОГО В РИМСКОЕ
         if (!+num)
             return false;
         var digits = String(+num).split(""),
@@ -659,17 +686,12 @@ console.log(addbits('5 + 30')); */
         while (i--)
             roman = (key[+digits.pop() + (i * 10)] || "") + roman;
         return Array(+digits.join("") + 1).join("M") + roman;
-    }
+    } */
     
-    
-    function func(str){
+    /* function func(str){//КАЛЬКУЛЯТОР
         let arr = str.split(" ");
         let resultate = sum(Number(arr[0]),Number(arr[2]));
-        /* if ( isNaN (arr[0] && isNaN(arr[2]))) {
-            if (arr[1]=='+'){
-                return `'${+arr[0] + +arr[2]}'` 
-            }
-        } */
+       
         if (!isNaN(arr[0]) && isNaN(arr[2]) || isNaN(arr[0]) && !isNaN(arr[2])) {
             throw "throws Error!"
         }
@@ -796,8 +818,8 @@ console.log(addbits('5 + 30')); */
             
         }
        
-    };
+    }; */
     
-    console.log( func("I - II"));
-    console.log(typeof( func("I - V")));
+    /* console.log( func("I - II"));
+    console.log(typeof( func("I - V"))); */
     
