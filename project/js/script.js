@@ -23,4 +23,12 @@ const movieDB = {
         "Скотт Пилигрим против..."
     ]
 };
-
+const promoAdv = document.querySelector('.promo__adv');
+console.log(promoAdv);
+const promoImg = promoAdv.querySelectorAll('img');
+console.log(promoImg);
+promoImg[0].remove();
+console.log(promoImg)
+/* promoImg.forEach(item => {
+    console.log(item);
+}); */
