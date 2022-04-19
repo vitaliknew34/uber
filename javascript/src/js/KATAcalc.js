@@ -164,5 +164,5 @@ function func(str){
    
 };
 
-console.log( func("2 + 5"));
+console.log( func("III - I"));
 console.log(typeof(func("I - V")));
