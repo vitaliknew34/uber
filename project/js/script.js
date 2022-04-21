@@ -38,3 +38,6 @@ const element = document.querySelector('.promo__bg');
 console.log(element);
 element.setAttribute('style','background: url(/project/img/bg.jpg) center center/cover no-repeat')//задание 3
 
+
+//задание 5 убрать inline-block для списка и ol вместо ul
+
