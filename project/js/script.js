@@ -26,9 +26,15 @@ const movieDB = {
 const promoAdv = document.querySelector('.promo__adv');
 console.log(promoAdv);
 const promoImg = promoAdv.querySelectorAll('img');
-console.log(promoImg);
-promoImg[0].remove();
-console.log(promoImg)
-/* promoImg.forEach(item => {
-    console.log(item);
-}); */
+/* console.log(promoImg); */
+promoImg.forEach(item => {//задание №1 с помощью перебора
+    item.remove()
+});  
+const genre = document.querySelector('.promo__genre');
+console.log(genre)
+genre.textContent = "ДРАМА";//задание 2
+
+const element = document.querySelector('.promo__bg');
+console.log(element);
+element.setAttribute('style','background: url(/project/img/bg.jpg) center center/cover no-repeat')//задание 3
+
