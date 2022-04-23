@@ -40,4 +40,40 @@ element.setAttribute('style','background: url(/project/img/bg.jpg) center center
 
 
 //задание 5 убрать inline-block для списка и ol вместо ul
+    const promoInteractive = document.querySelector('.promo__interactive');
+    console.log(promoInteractive);
+    const divNoName = promoInteractive.querySelectorAll('div')[0];
+    console.log(divNoName);
+    const list = divNoName.querySelector('ul');
+    console.log(list);
+    const listItem = list.querySelectorAll('li');
+    console.log(listItem);
+    listItem.forEach(item => {
+        item.setAttribute('style','display: list-item')
+    });//измененения стиля li нумерация
+    list.setAttribute('style','list-style-type: auto');//изменение ul(ol) нумерация
+    /**
+ * {HTMLElement} element Элемент, имя тэга которого будет заменено.
+ *  {String} newTagName Новое имя тэга.
+ **/
+    /* let listNew = ol; */
+    function replaceTag(element, newTagName) {
+    // Создаём новый тэг.
+    var newTag = document.createElement(newTagName);
 
+    // Вставляем новый тэг перед старым.
+    element.parentElement.insertBefore(newTag, element);
+
+    // Переносим в новый тэг атрибуты старого с их значениями.
+    for (var i = 0, attrs = element.attributes, count = attrs.length; i < count; ++i)
+        newTag.setAttribute(attrs[i].name, attrs[i].value);
+
+    // Переносим в новый тэг все дочерние элементы старого.
+    var childNodes = element.childNodes;
+    while (childNodes.length > 0)
+        newTag.appendChild(childNodes[0]);
+
+    // Удаляем старый тэг.
+    element.parentElement.removeChild(element);
+}
+replaceTag(list, 'ol');
