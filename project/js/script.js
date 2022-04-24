@@ -23,28 +23,54 @@ const movieDB = {
         "Скотт Пилигрим против..."
     ]
 };
-const promoAdv = document.querySelector('.promo__adv');
+//Задание 1
+const promoAdv = document.querySelectorAll('.promo__adv img');
 console.log(promoAdv);
-const promoImg = promoAdv.querySelectorAll('img');
-/* console.log(promoImg); */
-promoImg.forEach(item => {//задание №1 с помощью перебора
+promoAdv.forEach(item => { // c помощью перебора
     item.remove()
 });  
+//обычная функция
+/* promoAdv.forEach(function (item) { 
+    item.remove()
+}); */
+
+// или ВТОРОЙ вариант РЕШЕНИЯ первого задания
+
+/* const promoAdv = document.querySelector('.promo__adv');
+console.log(promoAdv);
+const promoImg = promoAdv.querySelectorAll('img'); 
+console.log(promoImg); 
+promoImg.forEach(item => { // c помощью перебора
+    item.remove()
+});  
+ */
+//задание 2
 const genre = document.querySelector('.promo__genre');
 console.log(genre)
 genre.textContent = "ДРАМА";//задание 2
+//Задание 3
+const poster = document.querySelector('.promo__bg');
+console.log(poster);
+poster.style.backgroundImage = 'url("img/bg.jpg")';//по образцу
 
-const element = document.querySelector('.promo__bg');
-console.log(element);
-element.setAttribute('style','background: url(/project/img/bg.jpg) center center/cover no-repeat')//задание 3
+// Задание 3 Второй вариант добавление атрибута
+/* poster.setAttribute('style','background: url(/project/img/bg.jpg) center center/cover no-repeat')// */
 
+//задание 4 и 5
+const movieList = document.querySelector('.promo__interactive-list');
+    console.log(movieList);
+    movieList.innerHTML = "";
+    movieDB.movies.sort();// cортирвка массива
+    movieDB.movies.forEach((film,i) => {
+        movieList.innerHTML += 
+        `<li class="promo__interactive-item"> ${i + 1} ${film}
+            <div class="delete"></div>
+        </li>`
+    });
 
+/* МОЙ ВАРИАНТ 5 Задачи 
 //задание 5 убрать inline-block для списка и ol вместо ul
-    const promoInteractive = document.querySelector('.promo__interactive');
-    console.log(promoInteractive);
-    const divNoName = promoInteractive.querySelectorAll('div')[0];
-    console.log(divNoName);
-    const list = divNoName.querySelector('ul');
+    const list = document.querySelector('ul.promo__interactive-list');
     console.log(list);
     const listItem = list.querySelectorAll('li');
     console.log(listItem);
@@ -52,11 +78,12 @@ element.setAttribute('style','background: url(/project/img/bg.jpg) center center
         item.setAttribute('style','display: list-item')
     });//измененения стиля li нумерация
     list.setAttribute('style','list-style-type: auto');//изменение ul(ol) нумерация
-    /**
- * {HTMLElement} element Элемент, имя тэга которого будет заменено.
- *  {String} newTagName Новое имя тэга.
- **/
-    /* let listNew = ol; */
+  */
+/* // изменение тега
+ // {HTMLElement} element Элемент, имя тэга которого будет заменено.
+ // {String} newTagName Новое имя тэга.
+ 
+    
     function replaceTag(element, newTagName) {
     // Создаём новый тэг.
     var newTag = document.createElement(newTagName);
@@ -77,3 +104,4 @@ element.setAttribute('style','background: url(/project/img/bg.jpg) center center
     element.parentElement.removeChild(element);
 }
 replaceTag(list, 'ol');
+ */
