@@ -61,7 +61,7 @@ const movieList = document.querySelector('.promo__interactive-list');
     console.log(movieList);
     movieList.innerHTML = "";
     movieDB.movies.sort();// cортирвка массива
-    movieDB.movies.forEach((film,i) => {
+    movieDB.movies.forEach((film, i) => {
         movieList.innerHTML += 
         `<li class="promo__interactive-item"> ${i + 1} ${film}
             <div class="delete"></div>
