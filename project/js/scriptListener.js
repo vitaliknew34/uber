@@ -1,5 +1,6 @@
-
-/* Задания на урок:
+'use strict'
+document.addEventListener('DOMContentLoaded', () => {
+    /* Задания на урок:
 
 1) Удалить все рекламные блоки со страницы (правая часть сайта)
 
@@ -131,6 +132,4 @@ P.S. Здесь есть несколько вариантов решения з
 /* const btnOk = document.querySelector('form.add>button');
 console.log(btnOk)
 const input = document.querySelector('input.adding__input'); */
-
-
-
+});
