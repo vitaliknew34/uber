@@ -129,7 +129,19 @@ P.S. Здесь есть несколько вариантов решения з
 
 // Возьмите свой код из предыдущей практики
 
-/* const btnOk = document.querySelector('form.add>button');
-console.log(btnOk)
-const input = document.querySelector('input.adding__input'); */
+const form = document.querySelector('form.add');
+console.log(form)
+const addInput = form.querySelector('.adding__input');
+const checkbox = form.querySelector(' [type = "checkbox"] ');
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();// ОТМЕНИТЬ СТАНДАРТНОГО ПОВЕДЕНИЯ БРАУЗЕРА
+});
+
+const newFilm = addInput.value;
+const favorite = checkbox.checked;
+
+movieDB.movies.push(newFilm);
+
+
 });
